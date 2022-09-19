@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+
+	</head>
+
+	<body>
+		<table border="1">
+			<tr>
+				{% for key in d.keys() %}
+				<th> {{ key }} </th>
+				{% endfor %}
+			</tr>
+			{% for i in range(len) %}
+			<tr>
+				{% for key in d.keys() %}
+					<td> {{ d.get(key)[i] }} </td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
